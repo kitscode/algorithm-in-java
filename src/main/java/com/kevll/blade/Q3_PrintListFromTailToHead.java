@@ -23,7 +23,7 @@ public class Q3_PrintListFromTailToHead {
         }
     }
 
-    public static ArrayList<Integer> printListFromTailToHead_k(ListNode listNode) {
+    static ArrayList<Integer> printListFromTailToHead_k(ListNode listNode) {
         ArrayList<Integer> list = new ArrayList<>();
         if (listNode == null) {
             return list;

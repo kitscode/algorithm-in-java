@@ -28,7 +28,7 @@ public class Q6_MinNumberInRotateArray {
     }*/
 
     //二分查找
-    public int minNumberInRotateArray(int[] array) {
+    int minNumberInRotateArray(int[] array) {
         if (array.length == 0)
             return 0;
         int left = 0;

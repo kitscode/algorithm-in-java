@@ -26,11 +26,11 @@ public class Q5_BuildQueueWithStack {
     Stack<Integer> stack1 = new Stack<Integer>();
     Stack<Integer> stack2 = new Stack<Integer>();
 
-    public void push(int node) {
+    void push(int node) {
         stack1.push(node);
     }
 
-    public int pop() {
+    int pop() {
         if (!stack2.empty()) {
             return stack2.pop();
         } else {

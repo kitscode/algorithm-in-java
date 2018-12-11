@@ -12,7 +12,7 @@ public class Q2_ReplaceSpace {
      * 例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy
      */
 
-    public static String replaceSpace_k(String str) {
+    static String replaceSpace_k(String str) {
         char[] s_char = str.toCharArray();
         StringBuffer result = new StringBuffer();
         for (int i = 0; i < s_char.length; i++) {

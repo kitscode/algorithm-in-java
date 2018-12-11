@@ -21,7 +21,7 @@ public class Q8_ReverseList {
         }
     }
 
-    public static ListNode reverseList(ListNode head) {
+    static ListNode reverseList(ListNode head) {
         if (head == null)
             return null;
         Stack stack = new Stack();

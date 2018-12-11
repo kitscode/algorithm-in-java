@@ -1,7 +1,5 @@
 package com.kevll.blade;
 
-import org.junit.Test;
-
 /**
  * @author: kevin
  * @date: 2018/6/15
@@ -15,7 +13,7 @@ public class Q7_Fibonacci {
      * 1、1、2、3、5、8、13、21、34、
      */
 
-    public int Fibonacci(int n) {
+    static int Fibonacci(int n) {
         if (n == 0)
             return 0;
         if (n == 1 || n == 2)
@@ -29,8 +27,8 @@ public class Q7_Fibonacci {
         return array[n - 1];
     }
 
-    @Test
-    public void test() {
+
+    public static void main(String[] args) {
         System.out.println(Fibonacci(7));
     }
 }

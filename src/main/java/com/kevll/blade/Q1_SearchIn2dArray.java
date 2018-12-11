@@ -41,7 +41,7 @@ public class Q1_SearchIn2dArray {
         return false;
     }
 
-    public static boolean find_k(int target, int[][] array) {
+    static boolean find_k(int target, int[][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if (array[i][j] == target)
