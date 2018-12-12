@@ -6,7 +6,7 @@ import java.util.Stack;
  * @author: Kevin Zhang
  * @date: 2018/10/12
  */
-public class Q8_ReverseList {
+public class Q15_ReverseList {
 
     /**
      * 输入一个链表，反转链表后，输出新链表的表头。
