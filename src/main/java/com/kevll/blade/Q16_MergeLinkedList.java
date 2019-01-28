@@ -18,19 +18,57 @@ public class Q16_MergeLinkedList {
     }
 
     public static ListNode merge(ListNode list1, ListNode list2) {
-        if(list1 == null){
+        if (list1 == null)
             return list2;
-        }
-        if(list2 == null){
+        if (list2 == null)
             return list1;
+
+        //list2 inserts into list1, record the return node
+        ListNode returnNode = list1;
+
+        while (list2.next != null) {    //loop through list2
+            ListNode list2Next = list2.next;
+
+            ListNode list1Pre = null;
+            while (list1.next != null) {    //loop through list1
+                if (list1.val > list2.val) {
+                    list2.next = list1;
+                    list1Pre.next = list2;
+                    break;
+                } else {
+                    list1Pre = list1;
+                    list1 = list1.next;
+                }
+            }
+            if (list1.val > list2.val) {
+                list2.next = list1;
+                list1Pre.next = list2;
+            }
+
+            list1 = returnNode;     //recovery list1
+            list2 = list2Next;      //list2 go to next
         }
-        if(list1.val <= list2.val){
-            list1.next = merge(list1.next, list2);
-            return list1;
-        }else{
-            list2.next = merge(list1, list2.next);
-            return list2;
+
+        ListNode list1Pre = null;
+        while (list1.next != null) {    //sort last 1 in list2
+            if (list1.val > list2.val) {
+                list2.next = list1;
+                list1Pre.next = list2;
+                break;
+            } else {
+                list1Pre = list1;
+                list1 = list1.next;
+            }
         }
+        if (list1.val > list2.val) {
+            list2.next = list1;
+            list1Pre.next = list2;
+        } else {
+            list1.next = list2;
+        }
+
+
+        return returnNode;
     }
 
     public static void main(String[] args) {
@@ -55,7 +93,7 @@ public class Q16_MergeLinkedList {
         System.out.println();
         printNodeList(nodeA);
         System.out.println();
-//        printNodeList(merge(node1, node2));
+        printNodeList(merge(node1, nodeA));
     }
 
     static void printNodeList(ListNode head) {
@@ -63,6 +101,6 @@ public class Q16_MergeLinkedList {
             System.out.print(head.val + " ");
             head = head.next;
         }
-        System.out.print(head.val + " ");
+        System.out.print(head.val + " ");   //print the last one
     }
 }
