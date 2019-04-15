@@ -19,12 +19,12 @@ public class Q9_GetLeastNumbers_Solution {
      */
 
     ArrayList<Integer> GetLeastNumbers_Solution(int[] input, int k) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
+        ArrayList<Integer> result = new ArrayList<>();
         int length = input.length;
         if (k > length || k == 0) {
             return result;
         }
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k, new Comparator<Integer>() {
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(k, new Comparator<Integer>() {
 
             @Override
             public int compare(Integer o1, Integer o2) {
